@@ -63,6 +63,23 @@
         text-align: center;
       }
 
+      .cover {
+        overflow: hidden;
+        margin: 0 0 30px;
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: var(--surface);
+        box-shadow: 0 24px 60px var(--shadow);
+      }
+
+      .cover img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
       .eyebrow {
         margin: 0 0 8px;
         color: var(--gold);
@@ -116,7 +133,7 @@
 
       .policies {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: 1fr;
         gap: 22px;
         align-items: start;
       }
@@ -219,6 +236,11 @@
           text-align: center;
         }
 
+        .cover {
+          margin-bottom: 20px;
+          border-radius: 18px;
+        }
+
         .policy-header,
         .policy-body {
           padding-right: 20px;
@@ -236,6 +258,17 @@
   <body>
     <main class="page-shell">
       <header class="hero">
+        <figure class="cover">
+          <img
+            src="assets/policy-cover.jpg"
+            alt="MGM Studio — Ideas, Code, Play"
+            width="2048"
+            height="1152"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </figure>
+
         <p class="eyebrow">Sổ Niệm Phật · Chanting Counter</p>
         <h1>Chính sách quyền riêng tư<br />Privacy Policy</h1>
         <p class="subtitle">
@@ -378,7 +411,7 @@
         </article>
       </div>
 
-      <footer>© 2026 MGM Studio · Sổ Niệm Phật / Chanting Counter</footer>
+      <footer>© 2026 MGM Studio</footer>
     </main>
   </body>
 </html>
